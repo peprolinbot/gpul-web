@@ -20,9 +20,11 @@ import Filter from "../components/Filter.astro";
   <Filter tags={novaTags}/>
 
   <!-- Lista de noticias -->
-  <ContentDisplay contents={novas} card={NovaCard}>
-    <Fragment slot="title"> </Fragment>
-  </ContentDisplay>
+  <section>
+    <ContentDisplay contents={novas} card={NovaCard}>
+      <Fragment slot="title"> </Fragment>
+    </ContentDisplay>
+  </section>
 
   <!-- TODO: should we really paginate this? the data is already loaded, can't it be doomscroll? -->
   <!-- <div class="mt-12 flex justify-center"> -->

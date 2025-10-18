@@ -7,7 +7,6 @@ import CallToAction from "../components/CallToAction.astro";
 import { directive } from '../content/directive.ts'
 import DirectiveCard from "../components/DirectiveCard.astro";
 import ContentDisplay from "../components/ContentDisplay.astro";
-console.log({directive})
 ---
 
 <PageLayout
@@ -16,7 +15,7 @@ console.log({directive})
 >
   <PageTitle
     title="Quen Somos"
-    subtitle="26 anos promovendo a cultura libre na Universidade da Coruña e máis alá"
+    subtitle="Dende 1998 promovendo a cultura libre na Universidade da Coruña e máis alá"
   />
 
   <Mission/>
@@ -63,14 +62,16 @@ console.log({directive})
   </section>
 
   <!-- Directiva actual -->
-  <ContentDisplay contents={directive} card={DirectiveCard}>
-    <Fragment slot="title">
-      <h2 class="text-3xl font-bold text-gray-900 mb-4">Xunta Directiva</h2>
-      <p class="text-xl text-gray-600">
-        O equipo que lidera GPUL na actualidade
-      </p>
-    </Fragment>
-  </ContentDisplay>
+  <section class="py-16">
+    <ContentDisplay contents={directive} card={DirectiveCard}>
+      <Fragment slot="title">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Xunta Directiva</h2>
+        <p class="text-xl text-gray-600">
+          O equipo que lidera GPUL na actualidade
+        </p>
+      </Fragment>
+    </ContentDisplay>
+  </section>
 
   <CallToAction/>
 

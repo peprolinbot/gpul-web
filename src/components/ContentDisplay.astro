@@ -4,22 +4,20 @@ const { contents, card } = Astro.props;
 const Card = card;
 ---
 
-<section>
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    <div class="text-center mb-12">
-      <slot name="title"/>
-    </div>
-
-    <div class="flex flex-wrap gap-8 place-content-center justify-items-center pb-4">
-      {
-        contents.map((content: any) => (
-          <Card
-            content={content}
-          />
-        ))
-      }
-    </div>
-
+  <div class="text-center mb-12">
+    <slot name="title"/>
   </div>
-</section>
+
+  <div class="flex flex-wrap gap-8 place-content-center justify-items-center pb-4">
+    {
+      contents.map((content: any) => (
+        <Card
+          content={content}
+        />
+      ))
+    }
+  </div>
+
+</div>

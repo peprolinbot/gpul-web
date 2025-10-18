@@ -22,26 +22,28 @@ import StarContent from "../components/StarContent.astro";
   <Stats/>
 
   <!-- Eventos próximos -->
-  <ContentDisplay contents={upcomingEvents} card={EventCard}>
-    <Fragment slot="title">
-      <h2 class="text-3xl font-bold text-gray-900 mb-4">Próximos Eventos</h2>
-      <p class="text-xl text-gray-600">
-        Non te perdas as nosas próximas actividades
-      </p>
-    </Fragment>
+  <section>
+    <ContentDisplay contents={upcomingEvents} card={EventCard}>
+      <Fragment slot="title">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Próximos Eventos</h2>
+        <p class="text-xl text-gray-600">
+          Non te perdas as nosas próximas actividades
+        </p>
+      </Fragment>
 
-    <Fragment slot="cta">
-      <div class="text-center mt-12">
-        <a 
-          href="/contact" 
-          class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
-        >
-          Propón un evento
-          <Plus class="ml-2 w-5 h-5" />
-        </a>
-      </div>
-    </Fragment>
-  </ContentDisplay>
+      <Fragment slot="cta">
+        <div class="text-center mt-12">
+          <a 
+            href="/contact" 
+            class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Propón un evento
+            <Plus class="ml-2 w-5 h-5" />
+          </a>
+        </div>
+      </Fragment>
+    </ContentDisplay>
+  </section>
 
   <StarContent/>
 
